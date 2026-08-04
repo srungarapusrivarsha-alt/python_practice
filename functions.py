@@ -14,7 +14,7 @@ num1=int(input("enter num1:"))
 num2=int(input("enter num2:"))
 sub(num1,num2)
 
-def even(num):
+def even(num): 
     if num%2==0:
         print("even")
     else:
