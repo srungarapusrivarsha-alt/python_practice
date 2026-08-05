@@ -125,3 +125,74 @@ s=smart_phone()
 s.take_photo()
 s.play_music()
 s.mobile()
+
+
+class person:
+    def __init__(self,name,department):
+        self.name=name
+        self.department=department
+    def display_details(self):
+        print("name:",self.name)
+        print("department:",self.department)
+class employee(person):
+    def __init__(self,name,department):
+        super().__init__(name,department)
+    def work(self):
+        print(f"employee {self.name}in department {self.department} is working.. ")
+class manager(employee):
+    def approve_leaf(self):
+        print("leave approved successfully...")
+m=manager("varsha","IT")
+m.display_details()
+m.work()
+m.approve_leaf()
+
+class book:
+    def read(self):
+        print("reading the book..")
+class ebook(book):
+    def download(self):
+        print("downloading ebook....")
+        print("**downloaded successfully**")
+class programming_book(ebook):
+    def practice_code(self):
+        print("practicing code in python programming language")
+pb=programming_book()
+pb.read()
+pb.download()
+pb.practice_code()
+
+class account:
+    def create_account(self):
+        print("account created..")
+class savings_account(account):
+        def deposit(self):
+         print("amount deposited successfully in account...")
+class premium_savings(savings_account):
+    def add_interest(self):
+        print("interest added successfully....")
+ps=premium_savings()
+ps.create_account()
+ps.deposit()
+ps.add_interest()
+
+class notification:
+    def send(self):
+        print("sending notification")
+class email_notification(notification):
+    def send(self):
+        print("sending email notification")
+class sms_notification(notification):
+    def send(self):
+     print("sending sms notification")
+class whatsapp_notification(notification):
+    def send(self):
+     print("sending whatsapp notification")
+email=email_notification()
+sms=sms_notification()
+wtsapp=whatsapp_notification()
+email.send()
+sms.send()
+wtsapp.send()
+
+
